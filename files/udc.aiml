@@ -82,7 +82,7 @@
     <!-- Profesor saque los precios de la pagina de metro  https://www.metro.pe/abarrotes -->
 
   <category>
-      <pattern>A CUANTO EL *</pattern>
+      <pattern>a cuanto el *</pattern>
       <template>
           <think><set name = "state"><star /></set></think>
           
