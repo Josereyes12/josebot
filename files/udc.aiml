@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+  <!-- Hola profesor soy el alumno Jose Reyes y
+  este es mi bot le quiero comunicar que he aprendido el uso de una serie de
+  videos de youtube https://www.youtube.com/watch?v=aRHtt_Na2O0 pero solo para
+  aprender como usar la pagina y el lenguaje ya que el contenido de este bot lo he creado yo-->
+  <category>
+      <pattern>CUAL ES TU NOMBRE</pattern>
+      <template>Mi nombre es josebot</template>
+  </category>
+  
+  <category>
+      <pattern>*</pattern>
+      <template><star /></template>
+  </category>
+  
+   <category>
+      <pattern>me estas copiando</pattern>
+      <template>tu que crees</template>
+  </category>
+  
+  <category>
+      <pattern>* bot * </pattern>
+      <template>No quiero responder eso</template>
+  </category>
+  
+  <category>
+      <pattern> dime que es * para ti </pattern>
+      <template><srai> no estoy seguro que es <star/> para comenzar</srai></template>
+  </category>
+  
+  <category>
+      <pattern>DIME MAS</pattern>
+      <that>MI NOMBRE ES JOSEBOT</that>
+      <template> ya no se que mas decirte </template>
+  </category>
+  
+  <category>
+      <pattern>QUE ES UNA TIENDA</pattern>
+      <template>Segun wikipedia una tienda es es un tipo de establecimiento comercial, físico o virtual, donde el comprador puede adquirir tanto bienes como servicios a cambio de dinero</template>
+  </category>
+  
+  <category>
+      <pattern>QUIEN TE CREO</pattern>
+      <template>Me creo Jose Reyes con ayuda de pandorabots</template>
+  </category>
+  <category>
+      <pattern>DIME MAS SOBRE EL</pattern>
+      <that>ME CREO JOSE REYES CON AYUDA DE PANDORABOTS</that>
+      <template>Otra cosa que se sobre el es que estudia Ciencias de la Computacion en la UNI</template>
+  </category>
+  
+  <category>
+      <pattern>ALGO MAS</pattern>
+      <that>OTRA COSA QUE SE SOBRE EL ES QUE ESTUDIA CIENCIAS DE LA COMPUTACION EN LA UNI</that>
+      <template>Preguntale directamente a el, ¡Que yo solo soy un bot!</template>
+  </category>
+  
+  <!-- probando comentarios -->
+  <category>
+      <pattern>DIME UN NUMERO</pattern>
+      <template>
+          <random>
+              <li>Uno</li>
+              <li>Dos</li>
+              <li>Tres</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>MI NOMBRE ES *</pattern>
+      <template> Bienvenido <set name = "username"><star /></set>!</template>
+  </category>
+  
+  <category>
+      <pattern>CUAL ES MI NOMBRE</pattern>
+      <template>Tu nombre es <get name="username" /></template>
+  </category>
+  
+    <!-- Profesor saque los precios de la pagina de metro  https://www.metro.pe/abarrotes -->
+
+  <category>
+      <pattern>A CUANTO EL *</pattern>
+      <template>
+          <think><set name = "state"><star /></set></think>
+          
+          <condition name = "state" value = "arroz"> 5 kilos del Costeño a S/19.90 amigo</condition>
+          <condition name = "state" value = "aceite"> El Nicolini de un litro a S/9.19  y el Metro de 900 ml a S/7.80 amigo</condition>
+          <condition name = "state" value = "atun"> El trozos de atun primor a S/4.70 amigo</condition>
+          <condition name = "state" value = "vinagre"> La botella de 625 ml de marca Florida a S/2.89 amigo</condition>
+          <condition name = "state" value = "Sillao"> La botella de 500ml a S/3.89 amigo</condition>
+
+
+      </template>
+  </category>
+</aiml>
+
+
